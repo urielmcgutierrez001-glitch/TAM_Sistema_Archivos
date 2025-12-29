@@ -1,0 +1,23 @@
+# PHP / project
+/vendor/
+/node_modules/
+.env
+.env.*
+/.idea/
+/.vscode/
+*.log
+*.sql
+/DataBaseSQLBackUp/
+__pycache__/
+*.pyc
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db
+
+# Composer
+/composer.lock
+
+# OS
+ehthumbs.db
+Icon?
