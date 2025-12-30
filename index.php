@@ -1,8 +1,10 @@
 ﻿<?php
-// Diagnostic: confirm this root index is being served
+// Diagnostic: confirm this root index is being served and show PHP errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 echo "ROOT INDEX: reached\n";
-// flush output so the platform logs/response show this immediately
-if (function_exists('fastcgi_finish_request')) { @fastcgi_finish_request(); }
 
 if (file_exists(__DIR__ . '/public/index.php')) {
 	require __DIR__ . '/public/index.php';
