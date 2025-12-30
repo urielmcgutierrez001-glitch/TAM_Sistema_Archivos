@@ -1,23 +1,23 @@
-# PHP / project
-/vendor/
-/node_modules/
+# Clever Cloud Deployment
+.clevercloud/
+composer.json
+config/database_clevercloud.php
+
+# Development
 .env
-.env.*
-/.idea/
-/.vscode/
-*.log
-*.sql
-/DataBaseSQLBackUp/
-__pycache__/
-*.pyc
-*.sqlite
-*.db
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Composer
-/composer.lock
+# Backups
+database/backups/
+*.sql.bak
 
-# OS
-ehthumbs.db
-Icon?
+# Logs
+*.log
