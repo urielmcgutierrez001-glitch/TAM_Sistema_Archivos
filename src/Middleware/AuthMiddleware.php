@@ -14,7 +14,9 @@ class AuthMiddleware
     public function handle()
     {
         if (!Session::isAuthenticated()) {
-            header('Location: /Proyecto/public/login');
+            // Redirect to the login route. When deployed the document root is
+            // the `public` folder, so use the application route `/login`.
+            header('Location: /login');
             exit;
         }
         
