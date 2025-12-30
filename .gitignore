@@ -21,3 +21,5 @@ database/backups/
 
 # Logs
 *.log
+
+# Ignore project zip\nProyecto.zip
