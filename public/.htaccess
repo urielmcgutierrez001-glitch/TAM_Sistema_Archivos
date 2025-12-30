@@ -1,11 +1,8 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Redirigir al directorio public si no está allí
-    RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^(.*)$ /public/$1 [L]
-    
-    # Redirigir todo a index.php
+
+    # En entorno de producción la carpeta `public` ya es el document root.
+    # Redirigir peticiones a `index.php` si no son archivos o directorios existentes.
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.php [L]
